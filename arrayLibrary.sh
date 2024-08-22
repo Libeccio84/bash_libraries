@@ -55,7 +55,7 @@ function lib.dropDuplicates {
 function lib.isin {
     local element=$1
     local list=$2
-    if egrep -q ";;;${element};;;" <<< "$(lib.printArray ';;;%s;;;' $list)"; then
+    if grep -q ";;;${element};;;" <<< "$(lib.printArray ';;;%s;;;' $list)"; then
         return 0
     else
         return 1
