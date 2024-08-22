@@ -34,10 +34,6 @@ function lib.deltaSet {
     lib.printArray '%s\n' $list1 | egrep -v "$egrepFilter"   
 }
 
-function lib.printElement {
-    echo "$1" | tr -d '\n'
-}
-
 function lib.mergeSet {
     local list1=$1
     local list2=$2
