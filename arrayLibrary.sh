@@ -53,7 +53,7 @@ function lib.intersectSet {
 
 function lib.dropDuplicates {
     local list=$1
-    lib.printArray $list | sort | uniq
+    eval "readarray -t $list <<< \"$(lib.printArray $list | sort | uniq)\""
 }
 
 function lib.isin {
