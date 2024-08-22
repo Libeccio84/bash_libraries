@@ -79,11 +79,12 @@ $ lib.intersectSet a b
 ```
 
 ### lib.dropDuplicates
-This function prints list elements removing duplicates. The result does not necessarily respects list order.<br>
+This function overwrites input list sorting it and removing duplicates.<br>
 Example:
 ```bash
 $ a=(1 2 2 4 3 4 5)
 $ lib.dropDuplicates a
+$ printf '%s\n' a
 1
 2
 3
