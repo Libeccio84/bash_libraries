@@ -11,6 +11,9 @@ Any array must be passed to these functions marely by its name, for instance
 a=(1 2 3)
 lib.printArray a
 ```
+| **Caveat** |
+|:--|
+|Following functions have been developed working with standard file paths and some use regex.<br>If an array element contains any regex special character (_e.g._ `*`, `[`, ...), `lib.deltaSet`, `lib.mergeSet` and `lib.intersectSet` functions are likely to fail.|
 
 ### lib.printArray
 This is a wrapper for `printf` which can be used as follows:
